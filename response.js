@@ -1,4 +1,5 @@
 var savedUsers = {};
+var $selectUser = 0;
 $(document).ready(function () {
   fetchUserData();
   function fetchUserData() {
@@ -51,10 +52,13 @@ $(document).ready(function () {
   });
   $(document.body).on("change", ".userSelector", function () {
     savedUsers[$(this).data("userid") + "userId"] = $(this).data("userid");
+    if ($("input:checkbox:checked").length > 0)
+      $("#saveUsers").removeAttr("disabled");
+    else $("#saveUsers").attr("disabled", "true");
   });
   $(document.body).on("click", "#saveUsers", function () {
     console.log(savedUsers);
-    $(".userSelector").each(function (index) {
+    $(".userSelector").each(function () {
       $(this).prop("checked", false);
     });
   });
