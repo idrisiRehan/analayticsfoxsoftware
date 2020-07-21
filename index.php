@@ -64,16 +64,7 @@
                     </tr>
                 <?php } ?>
             </tbody>
-            <thead>
-                <tr class="indigo white-text">
-                    <th scope="col" class="indigo white-text">#</th>
-                    <th scope="col"></th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Info</th>
-                </tr>
-            </thead>
+
         </table>
         <button class="btn float-right btn-lg indigo white-text py-2" id="saveUsers"><i class="fas fa-save"></i>
             Save</button>
