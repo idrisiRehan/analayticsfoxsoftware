@@ -33,7 +33,7 @@
             </thead>
             <tbody id="userList">
                 <tr> <input type="text" class="filterSearch w-100 my-2 form-control" placeholder="Search..."> </tr>
-                <?php for ($i = 0; $i <= 15; $i++) { ?>
+                <?php for ($i = 0; $i <= 10; $i++) { ?>
                     <tr class="removeAfterLoad">
                         <th scope="col"></th>
                         <th scope="col">
