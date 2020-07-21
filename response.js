@@ -45,20 +45,18 @@ $(document).ready(function () {
         <p>Company : ${users.company.name} <em>${users.company.catchPhrase}</em> </p>
         <p class='ml-5'> ${users.company.bs}</p>
         `;
-        $(".modal-body").html(output);
-        $(".modal-title").html(`${users.name}`);
+        $("#userModal .modal-body").html(output);
+        $("#userModal .modal-title").html(`${users.name}`);
       });
   });
   $(document.body).on("change", ".userSelector", function () {
     savedUsers[$(this).data("userid") + "userId"] = $(this).data("userid");
-    // savedUsers["user"] = $(this).data("userid");
   });
   $(document.body).on("click", "#saveUsers", function () {
     console.log(savedUsers);
     $(".userSelector").each(function (index) {
       $(this).prop("checked", false);
     });
-    $("#popUpMessage").modal("show");
   });
   $(".filterSearch").on("keyup", function () {
     var value = $(this).val().toLowerCase();

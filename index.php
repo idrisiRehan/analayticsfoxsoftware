@@ -66,9 +66,7 @@
             </tbody>
 
         </table>
-        <button class="btn float-right btn-lg indigo white-text py-2" id="saveUsers"><i class="fas fa-save"></i>
-            Save</button>
-        <div class='modal fade' id='userModal'>
+        <div class='modal fade' id='userModal' tabindex="-1" role="dialog">
             <div class='modal-dialog' role='document'>
                 <div class='modal-content'>
                     <div class='modal-header'>
@@ -90,6 +88,8 @@
             </div>
         </div>
     </main>
+    <button class="btn float-right btn-lg indigo white-text py-2" id="saveUsers" data-toggle='modal' data-target='#popUpMessage'><i class="fas fa-save"></i>
+        Save</button>
 
     <div class="modal fade mt-5 pt-3 " id="popUpMessage" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm" role="document">
