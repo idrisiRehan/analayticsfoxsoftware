@@ -26,6 +26,7 @@ $(document).ready(function () {
         });
 
         $("#userList").append(output);
+        $(".removeAfterLoad").remove();
       });
   }
   $(document.body).on("click", ".fetchUser", function () {
